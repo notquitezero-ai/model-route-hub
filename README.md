@@ -1,27 +1,38 @@
 # 模力枢纽 · Model Route Hub
 
-一个免费的中文 AI 模型 API 与算力导航站，帮助开发者从官方资料开始选型。
+**发现模型，验证方案，连接算力。**
 
-**[打开资源目录](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/)** · **[阅读模型 API / GPU / CPU 选型指南](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/guides/choose-api-gpu-cpu.html)**
+面向开发者的中文 AI 模型与计算资源导航。把分散的模型 API、GPU / CPU 服务和 Token 工具整理到同一个工作台：从官方资料开始选型，在浏览器里试问真实模型，再生成接入示例、估算使用成本。
 
-## 适合谁
+[**进入工作台 ↗**](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/) · [免费试问真实模型](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/#free-lab) · [阅读选型指南](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/guides/choose-api-gpu-cpu.html)
 
-- 想快速接入现成模型的应用开发者：按模型 API 分类查找官方入口，生成 OpenAI 兼容接口的 Python、JavaScript 或 cURL 示例。
-- 想部署或训练开放模型的团队：从 GPU 服务入口核对显存、地区、运行时长与停机费用。
-- 需要部署网站、数据库或普通后端的开发者：先比较 CPU 云主机，避免为不需要的 GPU 付费。
+---
 
-网站目前整理了 **27 个资源**：13 个模型 API、6 个 GPU 服务、4 个 CPU 服务和 4 个 Token 工具。支持分类、搜索、本地收藏和 Token 费用估算。配置生成器只在浏览器里生成示例；API Key 由使用者自行在本机管理。
+## 从发现到接入
 
-## 三步使用
+| 环节 | 你可以做什么 |
+| --- | --- |
+| **发现资源** | 按模型 API、GPU、CPU、Token 工具分类浏览，搜索服务商并直达官方文档与价格页。 |
+| **体验模型** | 在支持 WebGPU 的浏览器中，向 Qwen2.5 1.5B 真实模型免费试问两次；回答在本机生成。 |
+| **规划接入** | 为支持 OpenAI 兼容接口的服务商生成 Python、JavaScript、cURL 或 PowerShell 起步代码。 |
+| **估算成本** | 输入实际单价与请求量，粗估 Token 支出；也可使用提示词、Token 长度和显存估算工具。 |
 
-1. 先看[选型指南](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/guides/choose-api-gpu-cpu.html)，确定需要模型 API、GPU 还是 CPU。
-2. 在[资源目录](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/#catalog)里筛选服务商，打开其官方文档与价格页。
-3. 如果服务商提供 OpenAI 兼容接口，可用站内配置生成器创建起步代码；用你的真实工作负载测试质量、延迟和费用。
+目前收录 **27 个资源**：13 个模型 API、6 个 GPU 服务、4 个 CPU 服务和 4 个 Token 工具。目录支持筛选、搜索与浏览器本地收藏。资源数量截至 2026-10-16，持续维护中。
 
-## 反馈与补充
+## 60 秒开始使用
 
-欢迎通过 Issues 推荐遗漏的服务或指出失效链接。请附上**服务商官方文档或价格页**，并说明它属于模型 API、GPU、CPU 还是 Token 工具。资源收录不代表商业合作或质量背书。
+1. 打开[资源目录](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/#catalog)，按任务选择模型 API、GPU 或 CPU，并核对服务商官方资料。
+2. 到[免费体验区](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/#free-lab)试问模型，或用小工具估算提示词与算力需求。
+3. 在[路由配置生成器](https://model-route-hub-chen-20261016.nutty-wren-8644.chatgpt.site/#builder)创建接入示例；密钥由你自行在本机环境中管理。
 
-## 透明说明
+## 关于免费模型体验
 
-站点是独立资源索引。目前目录链接均为普通官方链接，没有专属返佣链接，也没有与所列服务商建立合作关系。站点不销售 Token 或算力，不代理 API 请求，也不代收服务商费用。价格、地区和条款请以服务商官方页面为准。
+体验区使用 [Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct) 和 [WebLLM](https://github.com/mlc-ai/web-llm) 在访客设备上运行真实模型，不调用本站托管的模型 API，也不需要共享 API Key。每个浏览器本地记录两次试问；清理浏览器数据可重置，**这不是账号级配额或防刷机制**。
+
+首次使用需下载约 800 多 MB 模型文件，且浏览器与设备须支持 WebGPU。它适合体验交互流程，不应代替云端大模型的质量评测；重要回答请自行核实。
+
+## 收录与反馈
+
+优先收录有官方文档、清晰入口和可核对服务条件的资源。价格、免费额度、地区与条款会变化，最终以服务商官方资料为准。欢迎在 [Issues](https://github.com/notquitezero-ai/model-route-hub/issues/new) 推荐资源、报告失效链接或提出合作建议；请附官方来源，勿提交 API Key 或保密报价。
+
+本仓库用于项目介绍与公开反馈。模力枢纽目前是独立资源索引：目录链接不是专属返佣链接，与所列服务商没有合作关系；本站不销售 Token 或算力，不代理付费 API 请求，也不代收服务商费用。
